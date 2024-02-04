@@ -1,18 +1,4 @@
 
-// Etape 4
-/*  
-*/
-
-
-
-
-
-
-
-
-
-
-
         //Fonction affiche les propositions du tableau
         function afficherProposition(leMotDuListe){
             let motAfficher = document.querySelector('.zoneProposition')           
@@ -32,14 +18,13 @@
             let i = 0
             let leTableau = listeMots
 
-            
-            
             let lInputButton1 = document.getElementById('inputEcriture')
             let bouttonValider = document.getElementById('button1')
             afficherProposition(leTableau[i])
             
+            //Boutton 'VALIDER'
+            //une fois le résultat saisit le joueur appuit sur le boutton "Valider", la barre de saisit se réinitialise et affiche un score 
             bouttonValider.addEventListener('click', () => {
-                console.log(lInputButton1.value)
 
                 if(lInputButton1.value === leTableau[i]) {
                     score++
@@ -50,11 +35,15 @@
                 afficherProposition(leTableau[i])
                 
                 if(i === leTableau.length) {
-                    afficherProposition("Le jeu est fini")
+                    afficherProposition("Le jeu est fini") // 1
                     bouttonValider.disabled = true        
                 }
             })      
+            //=====================================================
             
+            
+            //Choix "Radio"
+            //liste de choix entre le tableau "mots" et "Phrases" 
             let listeRadio = document.querySelectorAll(".optionSource input")
             for(let tour = 0; tour < listeRadio.length; tour++) {
                 listeRadio[tour].addEventListener('change', (event) => {
