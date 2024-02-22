@@ -1,22 +1,26 @@
+
+// 1. Grab the save-el paragraph and store it in variable called saveEl 
+let saveEl = document.getElementById("save-el")
 let countEl = document.getElementById("count-el")
 let count = 0
 
 function increment() {
-    count = count + 1
-    countEl.innerText = count
+    count += 1
+    countEl.textContent = count
 }
 
 function decrement() {
     if(count !== 0) {
-        count = count - 1
-        countEl.innerText = count
+        count -= 1
+        countEl.textContent = count
     } else {
         console.log("Increment before decrementing")
     }
 }
 
 function save() {
-    console.log(count)
+    let countElement = count+ " - "
+    saveEl.textContent += countElement
     countEl.innerText = count = 0
 }
 
