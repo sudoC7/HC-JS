@@ -33,3 +33,19 @@ h1 {
     font-weight: bold;
     margin: 20px;
 }
+
+.clickMe {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    color: #119c4f;
+    width: 150px;
+    background: rgb(200, 145, 5);
+    border-radius: 10px;
+    font-weight: bold;
+    border: none;
+}
+
+#twoButtons {
+    display: flex;
+    flex-direction: column;
+}

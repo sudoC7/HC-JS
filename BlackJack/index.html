@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-    <head>
+    <head> 
         <meta charset="UTF-8">
         <title>AZERTY</title>
         <link rel="stylesheet" href="styles.css">
@@ -9,8 +9,13 @@
         <h1>BlackJack</h1>
         <p id="message-el">Want to play a round ?</p>
         <div id="p2">
-            <p>Cards:</p>
-            <p>Sum:</p>
+            <!-- 1 . Give the cards paragraph and id of cards-el -->
+            <p id="cards-El">Cards:</p>
+            <p id="sum-El">Sum:</p>
+            <div id="twoButtons">
+                <input class="clickMe" type="button" value="START GAME" onclick="startGame();" />
+                <input class="clickMe" type="button" value="NEW GAME" onclick="newCard();" />
+            </div>        
         </div>
             <script src="script.js"></script>
     </body>
