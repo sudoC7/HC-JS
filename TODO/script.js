@@ -1,10 +1,8 @@
 
 //=========== ADD TASK ============\\
 const addBtn = document.querySelector('#btn')
-if(addBtn.addEventListener('click', addTask)){
-    countCards()
-} // add a task click
-
+addBtn.addEventListener('click', addTask)
+    
 const taskCard = document.querySelector(".todoCard")
 const taskContainer = document.querySelector("#todoCards")
 
@@ -31,7 +29,10 @@ function addTask() {
 
 const delBtn = document.querySelector('.delBtn')
 
-delBtn.addEventListener('click', deleteTask)
+delBtn.addEventListener('click', function(){
+    deleteTask(taskCard)
+    decrement()
+})
 
 // function remove task
 function deleteTask(task) {
@@ -43,10 +44,20 @@ function deleteTask(task) {
 
 //=========== COUNTER ============\\
 
-const counter = document.querySelector('#count')
-let compteur = 0
-function countCards() {
-    let counter = document.querySelector('#count')
-    compteur++ 
-    counter.innerText = toString(compteur)
+const counter = document.querySelector('#count') // j'appel l'id de la div 
+counter.innerText = 1
+let int = 1
+
+function updateCount() {
+        int += 1
+        counter.innerText = int 
 }
+
+function decrement() {
+    if(int !== 0) {
+        int -= 1
+        counter.innerText = int
+    }
+}
+
+//==================================\\
