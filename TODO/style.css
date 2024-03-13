@@ -1,0 +1,11 @@
+.delBtn i {
+    position: relative; 
+    top: -8px; 
+    right: 22px; 
+}
+
+#todoCards {
+    display: flex;
+    flex-direction: row;
+    justify-content: baseline;
+}
